@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './List.css'
 
 class List extends Component {
     // We'll call it when this.props.characterId were updated
@@ -8,8 +9,9 @@ class List extends Component {
         return (
             <div className="list">
                 <ul>
-                    {list.map((elem) => (
-                        <li
+                    {list.map((elem, index) => (
+
+                        <li className={elem.char_id === this.props.characterId && "active"}
                             key={elem.char_id}
                             onClick={() => {
                                 handleClick(elem.char_id);
@@ -20,7 +22,7 @@ class List extends Component {
                         </li>
                     ))}
                 </ul>
-            </div>
+            </div >
         )
     }
 }

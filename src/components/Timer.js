@@ -1,5 +1,5 @@
 import React from "react";
-
+import './Timer.css';
 export default class Timer extends React.Component {
     constructor(props) {
         super(props);
@@ -32,6 +32,6 @@ export default class Timer extends React.Component {
     }
 
     render() {
-        return (<div className="timer">Loading in <span>{this.state.timeLeft}</span> seconds</div>);
+        return (<div className="timer"><p>Loading in &nbsp;<span>{this.state.timeLeft} </span>&nbsp;seconds</p></div>);
     }
 }

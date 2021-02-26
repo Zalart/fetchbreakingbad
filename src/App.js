@@ -30,7 +30,7 @@ class App extends Component {
             /*   currentCharacter: result[0], */
             /*             currentCharacterId: 1,
                         prevCharacterId: 1, */
-            isLoaded: false,
+            /*             isLoaded: false, */
           });
         },
         (error) => {

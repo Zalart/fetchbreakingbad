@@ -1,0 +1,8 @@
+.list ul li {
+    list-style-type: none;
+    cursor:pointer;
+    line-height: 1.5em;
+}
+.list ul li.active {
+    color: red;
+}
