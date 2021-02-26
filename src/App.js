@@ -14,7 +14,7 @@ class App extends Component {
       currentCharacterId: null,
       prevCharacterId: null,
       isLoaded: false,
-      timeOut: null
+      timeOut: true
     }
     this.handleClick = this.handleClick.bind(this);
     this.handleLoad = this.handleLoad.bind(this);
@@ -27,10 +27,10 @@ class App extends Component {
         (result) => {
           this.setState({
             characters: result,
-            currentCharacter: result[0],
-            currentCharacterId: 1,
-            prevCharacterId: 1,
-            isLoaded: true,
+            /*   currentCharacter: result[0], */
+            /*             currentCharacterId: 1,
+                        prevCharacterId: 1, */
+            isLoaded: false,
           });
         },
         (error) => {
@@ -66,7 +66,6 @@ class App extends Component {
   componentDidUpdate() {
     console.log(this.state.timeOut)
     if (this.state.timeOut && this.state.currentCharacterId !== this.state.prevCharacterId) {
-
       fetch(`https://www.breakingbadapi.com/api/characters/${this.state.currentCharacterId}`)
         .then(res => res.json())
         .then(
